@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+a {
+	color: #fff;
+	background: #000;
+	width: 300px;
+	line-height: 3em;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	border: 2px solid transparent;
+	position: relative;
+	overflow: hidden;
+}
+
+a::before{
+	content: "";
+	background-color: #fff;
+	width: 110%;
+	height: 100%;
+	transform: skewX(45deg) translateX(0px);
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0.5;
+	transition: 1s;
+}
+
+a:hover::before {
+	transform: skewX(45deg) translateX(90%);
+	transition: 1s;
+}
